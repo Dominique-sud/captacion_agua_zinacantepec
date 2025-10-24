@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyecto de captación de agua en Zinacantepec">
+  <meta name="keywords" content="agua, captación, Zinacantepec, CECyTEM, medio ambiente">
+  <meta name="author" content="Pedro, Regina, Dominic">
+  <title>Captación de Aguas</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <div id="loader"><div class="spinner"></div></div>
+  <header>
+    <div class="logo">
+      <img src="imagenes/imagenn.jpg" alt="Logo de agua" class="logo-img">
+      <h1>Captación de Aguas</h1>
+    </div>
+
+    <!-- 🔹 Menú de navegación -->
+    <nav>
+      <ul id="menu">
+        <li><a href="#hero">Hero</a></li>
+        <li><a href="#2">Problema</a></li>
+        <li><a href="#3">Soluciones</a></li>
+        <li><a href="#4">Captaciones</a></li>
+        <li><a href="#6">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- 🔹 Botón hamburguesa -->
+    <button class="hamburger" id="btnHamburguesa" aria-label="Menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <main>
+    <section>
+      <h1>Inicio</h1>
+      <p>Este es un proyecto realizado, para verificar la Captación de las aguas pluviales, esperamos que este te sea útil para brindarte información :)</p>
+    </section>
+
+    <section id="hero">
+      <h2>Estadísticas del Agua</h2>
+      <p>Conoce los datos y problemáticas actuales del agua en Zinacantepec y cómo podemos contribuir a su mejor aprovechamiento.</p>
+    </section>
+
+    <section id="2">
+      <h1>Problema</h1>
+      <p>En Zinacantepec, cinco colonias han sufrido servicio intermitente de agua potable durante un mes debido al adeudo del organismo municipal de agua con la CFE, lo que redujo el funcionamiento de uno de los pozos.</p>
+    </section>
+
+    <section id="3">
+      <h1>Soluciones</h1>
+
+      <div class="tarjetas">
+        <article class="Tarjeta1">
+          <h2>Captación y Manejo del Agua</h2>
+          <ul>
+            <li>Captación de agua de lluvia (cisternas, tanques).</li>
+            <li>Infraestructura verde (techos y jardines de lluvia).</li>
+            <li>Calles y pisos permeables.</li>
+            <li>Reforestación y áreas verdes.</li>
+            <li>Mejorar el drenaje pluvial.</li>
+          </ul>
+        </article>
+
+        <article class="Tarjeta2">
+          <h2>Soluciones Urbanas y Comunitarias</h2>
+          <ul>
+            <li>Tanques de tormenta para lluvias intensas.</li>
+            <li>Canales y zanjas de infiltración.</li>
+            <li>Educación y participación comunitaria.</li>
+            <li>Normas urbanas que promuevan la captación.</li>
+            <li>Reutilizar el agua pluvial (riego, limpieza, sanitarios).</li>
+          </ul>
+        </article>
+
+        <article class="Tarjeta3">
+          <h2>Tips de Mantenimiento</h2>
+          <ul>
+            <li>Limpia filtros cada dos meses.</li>
+            <li>Sella grietas en el techo.</li>
+            <li>Coloca mallas en las canaletas.</li>
+            <li>Mantén el tanque cerrado correctamente.</li>
+            <li>Inspecciona el sistema cada ciertos meses.</li>
+          </ul>
+        </article>
+        <br>
+
+        <article class="Tarjeta4">
+          <h2>Preguntas Frecuentes</h2>
+          <p class="pregunta">1. ¿Qué materiales de techo son los mejores para recolectar el agua de lluvia?</p>
+          <p class="respuesta">Techos de metal o teja plástica; evita el asbesto o materiales tóxicos.</p>
+          <p class="pregunta">2. ¿Qué debo hacer para que la suciedad del techo no llegue a mi tanque?</p>
+          <p class="respuesta">Coloca rejillas o mallas y un sistema “first-flush” que desvíe el agua sucia inicial.</p>
+          <p class="pregunta">3. ¿Qué tipo de tanque es el mejor para guardar el agua de lluvia?</p>
+          <p class="respuesta">Tanque de plástico (polietileno), resistente, económico y de color oscuro.</p>
+          <p class="pregunta">4. ¿Cómo sé qué tan grande debe ser mi tanque de agua?</p>
+          <p class="respuesta">Depende del número de personas en casa y de la cantidad de lluvia en la zona.</p>
+          <p class="pregunta">5. ¿Qué pasa con el agua si llueve demasiado y mi tanque se llena?</p>
+          <p class="respuesta">Debe tener un rebosadero para liberar el exceso de agua sin desbordarse.</p>
+          <p class="pregunta">6. ¿Cómo se puede sacar el agua del tanque para usarla?</p>
+          <p class="respuesta">Con una llave si está elevado o con una bomba si está al nivel del suelo.</p>
+          <p class="pregunta">7. ¿Con qué frecuencia debo limpiar mi sistema y el tanque?</p>
+          <p class="respuesta">Rejillas y canaletas 1 o 2 veces al año; tanque cada 6 a 24 meses.</p>
+          <p class="pregunta">8. ¿Puedo utilizar el agua de lluvia para consumo humano?</p>
+          <p class="respuesta">No, a menos que se purifique; solo es recomendable para riego y limpieza.</p>
+        </article>
+        <br>
+
+        <article class="Tarjeta5">
+          <h2>Proveedores y Servicios</h2>
+
+         <div class="proveedor">
+         <h3>Ferretería Fermar</h3>
+         <p>Av. 16 de septiembre 207A, Vista Nevado I, 51350 San Miguel Zinacantepec, Méx.</p>
+         <p class="blue">📞+52 722 247 9675</p>
+         <p>No instalan, pero venden rejillas, válvulas, filtros y canaletas, todo lo que se puede utilizar para los sistemas de captación de aguas pluviales.</p>
+         </div>
+
+         <div class="proveedor">
+         <h3>Plomero TolZin</h3>
+         <p>Av. Adolfo Ruíz Cortines, 51355 San Miguel Zinacantepec, Méx.</p>
+         <p class="blue">📞 +52 722 257 0897</p>
+         <p>fb Plomero Toluca Zinacantepec (PlomeroTolzin)</p>
+         <p>Instalación de tuberías, filtros y rejillas que serían muy eficientes para el sistema de captación.</p>
+         </div>
+
+         <div class="proveedor">
+         <h3>Plomería y Electricidad Villalva</h3>
+         <p>La Palma 320, San Cristóbal Tecolit, 51367 San Miguel Zinacantepec, Méx.</p>
+         <p class="blue">📞 +52 729 499 9188</p>
+         <p>Igualmente realizan instalaciones de plomería con tuberías adecuadas para la captación pluvial.</p>
+         </div>
+      </article>
+      <article class="Tarjeta3">
+        <h2>Guia de instalacion basica</h2>
+        <ul>
+          <li>Sellador(Paragrietas o fisuras)</li>
+          <li>Canaletas o mallas</li>
+          <li>Bajantes o tuberias (pvc o galvanizadas)</li>
+          <li>Filtro</li>
+          <li>Tanques o cisterna</li>
+          <li>Valvulas y conexiones</li>
+          <li>Rejillas</li>
+          <li>Bomba (opcional)</li>
+        </ul>
+      </article>
+
+      <article class="Tarjeta1">
+        <h2>Imagen 1 :)</h2>
+        <img src="imagenes/bomba.png" alt="imagen de bomba de agua">
+      </article>
+      <article class="Tarjeta2">
+        <h2>Imagen 2 :)</h2>
+        <img src="imagenes/lamina.jpg" alt="imagen de lamina">
+      </article>
+
+      </div>
+    </section>
+
+    <section id="4">
+      <h1>Captaciones</h1>
+      <p>Se han instalado 10 sistemas de captación y purificación en el Valle de Toluca (incluye Zinacantepec).
+        <br> Capacidad total: ~1.7 millones de litros al año (≈172 pipas).
+        <br> Beneficio directo en Zinacantepec: +400 personas.
+        <br> Beneficio regional: hasta 2.8 millones de habitantes del Valle de Toluca.
+      </p>
+    </section>
+
+    <section id="5" class="calculadora-section">
+      <div class="contenedor">
+        <h1>Calculadora de Captación Pluvial</h1>
+        <br>
+        <label>Área del techo (m²):</label>
+        <input type="number" id="area" placeholder="Ejemplo 100"><br>
+
+        <label>Precipitación anual (mm):</label>
+        <input type="number" id="precipitacion" placeholder="Ejemplo 800"><br>
+
+        <label>Material del techo:</label>
+        <select id="material">
+          <option value="0.90">Lámina galvanizada (0.90)</option>
+          <option value="0.80">Concreto (0.80)</option>
+          <option value="0.75">Teja (0.75)</option>
+        </select><br>
+
+        <button id="btnCalcular">Calcular</button>
+        <div id="resultado" style="display:none;"></div>
+      </div>
+      <canvas id="grafica" style="display:none; width:100%; height:400px;"></canvas>
+    </section>
+
+    <section id="formulario-section">
+  <h1>Email</h1>
+  <form id="formulario">
+    <input type="email" placeholder="Tu correo electrónico" required><br>
+    <h2>Teléfono</h2>
+    <input type="text" placeholder="Teléfono" required><br>
+    <h2>Nombre</h2>
+    <input type="text" placeholder="Nombre" required><br>
+    <h2>Mensaje</h2>
+    <input type="text" placeholder="Mensaje" required><br>
+    <button type="submit">Envíar</button>
+  </form>
+  <p id="mensajeEnviado">✅ Enviado</p>
+</section>
+
+    <section>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer id="6">
+    <h1>Creadores</h1>
+    <p>Pedro, Regina, Dominic</p>
+    <p>contacto@agua.mx</p>
+    <p>📞 722-000-1234</p>
+    <p>Zinacantepec, Edo. de México</p>
+  </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/calculadora.js"></script>
+  <script src="js/formulario.js"></script>
+  <script src="js/mapa.js"></script>
+
+  <script>
+    const btnHamb = document.getElementById("btnHamburguesa");
+    const menu = document.getElementById("menu");
+
+    btnHamb.addEventListener("click", () => {
+      btnHamb.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.classList.add("hidden");
+    });
+  </script>
+</body>
+</html>
